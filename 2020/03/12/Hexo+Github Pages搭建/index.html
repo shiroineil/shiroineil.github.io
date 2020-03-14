@@ -192,7 +192,7 @@
 
 <ul>
 <li><p>生成ssh密匙</p>
-<pre><code class="bash">    ssh-keygen -t rsa -C &quot;example@mail.com&quot;</code></pre>
+<pre><code class="bash">ssh-keygen -t rsa -C &quot;example@mail.com&quot;</code></pre>
 <p>blog目录下，git命令行输入，然后直接三个回车即可，默认不需要设置密码。</p>
 <p>然后在硬盘中找到id_rsa.pub密钥文件，将内容全部复制到<a href="https://github.com/settings/keys" target="_blank" rel="noopener">GitHub_Settings_keys</a>页面，新建New SSH Key，粘贴所有内容。</p>
 </li>
@@ -253,11 +253,15 @@ git config --global user.email &quot;keepermx69@gamil.com&quot;</code></pre>
 <table>
 <thead>
 <tr>
-<th>hexo n “title”</th>
-<th align="left">新建一篇文章</th>
+<th>命令</th>
+<th align="left">含义</th>
 </tr>
 </thead>
 <tbody><tr>
+<td>hexo n “title”</td>
+<td align="left">新建一篇文章</td>
+</tr>
+<tr>
 <td>hexo g</td>
 <td align="left">g=generate 生成静态页面至public目录</td>
 </tr>
