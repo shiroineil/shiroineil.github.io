@@ -17,7 +17,7 @@
   <meta name="description" content="">
   <meta name="author" content="shironeil">
   <meta name="keywords" content="">
-  <title>Hexo+Github Pages搭建 - ShiroBox</title>
+  <title>Hexo+Github Pages搭建博客 - ShiroBox</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/5.12.1/css/all.min.css" />
 <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
@@ -186,8 +186,8 @@
 <li><p>绑定个人域名</p>
 </li>
 </ul>
-<h1 id="二、详细步骤"><a href="#二、详细步骤" class="headerlink" title="二、详细步骤"></a>二、详细步骤</h1><h2 id="1-购买个人域名"><a href="#1-购买个人域名" class="headerlink" title="1.购买个人域名"></a>1.<strong>购买个人域名</strong></h2><p>​        本人是在阿里云上购买的个人域名，读者可以根据个人情况自行选择，另外，此项是本教程搭建博客唯一需要购买的地方，如果不需要更改自定义域名，使用github pages域名即可。</p>
-<h2 id="2-注册github账号，创建仓库"><a href="#2-注册github账号，创建仓库" class="headerlink" title="2.注册github账号，创建仓库"></a>2.<strong>注册github账号，创建仓库</strong></h2><p>（建立github仓库，格式必须为：username.github.io）</p>
+<h1 id="二、详细步骤"><a href="#二、详细步骤" class="headerlink" title="二、详细步骤"></a>二、详细步骤</h1><h2 id="1-购买个人域名"><a href="#1-购买个人域名" class="headerlink" title="1.购买个人域名"></a>1.<strong>购买个人域名</strong></h2><p>​        本教程是通过阿里云购买的个人域名，读者可以根据个人情况自行选择。另外，此项是本教程搭建博客唯一需要支出的地方，并且如果不需要更改自定义域名，使用github pages域名即可。</p>
+<h2 id="2-注册github账号，创建仓库"><a href="#2-注册github账号，创建仓库" class="headerlink" title="2.注册github账号，创建仓库"></a>2.<strong>注册github账号，创建仓库</strong></h2><p>​        （建立github仓库，格式必须为：username.github.io）</p>
 <img src="https://s1.ax1x.com/2020/03/14/8MVHaQ.png" srcset="/img/loading.gif" alt="Snipaste 2020 03 11 21 16 33" style="zoom:80%;" />
 
 <ul>
@@ -201,16 +201,19 @@
 <p>  若成功创建，则显示</p>
 <p>  <img src="https://s1.ax1x.com/2020/03/14/8MVoqS.md.png" srcset="/img/loading.gif" alt="Snipaste 2020 03 11 21 22 13"></p>
 <h2 id="3-安装环境"><a href="#3-安装环境" class="headerlink" title="3.安装环境"></a>3.<strong>安装环境</strong></h2><ul>
-<li><a href="https://git-scm.com/download/win" target="_blank" rel="noopener">安装git</a></li>
+<li><p><a href="https://git-scm.com/download/win" target="_blank" rel="noopener">安装git</a></p>
+<p>安装成功后，鼠标右键选单会出现<code>Git Bash here</code></p>
+</li>
 </ul>
 <ul>
 <li><p><a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">安装Node.js</a></p>
 <p>（node -v\ npm -v查看是否安装成功）</p>
 </li>
 </ul>
-<h2 id="4-安装以及配置hexo"><a href="#4-安装以及配置hexo" class="headerlink" title="4.安装以及配置hexo"></a>4.<strong>安装以及配置hexo</strong></h2><pre><code class="bash">npm install -g cnpm --registry=https://registry.npm.taobao.org</code></pre>
-<p>​    通过npm安装hexo，安装成功后使用<code>hexo -v</code>查看版本</p>
+<h2 id="4-安装以及配置hexo"><a href="#4-安装以及配置hexo" class="headerlink" title="4.安装以及配置hexo"></a>4.<strong>安装以及配置hexo</strong></h2><p><em>创建博客根目录文件夹，通过git bash执行以下内容</em></p>
+<pre><code class="bash">npm install -g cnpm --registry=https://registry.npm.taobao.org</code></pre>
 <pre><code class="bash">npm install hexo --save --registry=https://registry.npm.taobao.org</code></pre>
+<p>​    通过npm安装hexo，安装成功后使用<code>hexo -v</code>查看版本</p>
 <pre><code class="bash">hexo init </code></pre>
 <p>​    初始化Hexo（需要在空目录下执行该命令）</p>
 <pre><code class="bash">npm install --registry=https://registry.npm.taobao.org</code></pre>
@@ -220,6 +223,7 @@
 <pre><code class="bash">hexo s</code></pre>
 <p>​    开启本地预览</p>
 <p>​    然后打开浏览器，输入 <code>localhost:4000</code> 就可以预览我们的本地博客</p>
+<p>​    </p>
 <h2 id="5-Hexo与Github仓库连接"><a href="#5-Hexo与Github仓库连接" class="headerlink" title="5.Hexo与Github仓库连接"></a>5.<strong>Hexo与Github仓库连接</strong></h2><ul>
 <li><p>blog根目录中的_config.yml文件称为<strong>站点</strong>配置文件，修改为如下内容</p>
 <pre><code class="yml">deploy: 
@@ -246,36 +250,32 @@ git config --global user.email &quot;keepermx69@gamil.com&quot;</code></pre>
 <pre><code class="bash">hexo s</code></pre>
 <pre><code class="bash">hexo d</code></pre>
 <p>   发布页面</p>
-</li>
-</ul>
 <table>
 <thead>
 <tr>
-<th>命令</th>
-<th>含义</th>
+<th>hexo n “title”</th>
+<th align="left">新建一篇文章</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>hexo n “title”</td>
-<td>新建一篇文章</td>
-</tr>
-<tr>
 <td>hexo g</td>
-<td>g=generate 生成静态页面至public目录</td>
+<td align="left">g=generate 生成静态页面至public目录</td>
 </tr>
 <tr>
 <td>hexo s</td>
-<td>s=server 开启预览访问端口</td>
+<td align="left">s=server 开启预览访问端口</td>
 </tr>
 <tr>
 <td>hexo d</td>
-<td>d=deploy 发布至GitHub</td>
+<td align="left">d=deploy 发布至GitHub</td>
 </tr>
 <tr>
 <td>hexo -v</td>
-<td>v=version 显示hexo版本信息</td>
+<td align="left">v=version  显示hexo版本信息</td>
 </tr>
 </tbody></table>
+</li>
+</ul>
 <h2 id="6-绑定个人域名"><a href="#6-绑定个人域名" class="headerlink" title="6.绑定个人域名"></a>6.绑定个人域名</h2><ul>
 <li><p>阿里云网页内，域名解析—&gt;解析设置—&gt;选择域名—&gt;添加记录</p>
 <img src="https://s1.ax1x.com/2020/03/14/8MVIr8.png" srcset="/img/loading.gif" alt="Snipaste 2020 03 12 21 09 06"  />
@@ -292,14 +292,14 @@ git config --global user.email &quot;keepermx69@gamil.com&quot;</code></pre>
 </li>
 </ul>
 <ul>
-<li>github仓库<a href="https://github.com/shiroineil/shiroineil.github.io/settings" target="_blank" rel="noopener">设置</a>中，保存个人域名</li>
+<li>github仓库设置中，添加个人域名</li>
 </ul>
 <img src="https://s1.ax1x.com/2020/03/14/8MVLPs.png" srcset="/img/loading.gif" alt="Snipaste 2020 03 13 23 08 02" style="zoom:80%;" />
 
 
 
 <ul>
-<li><strong>注意：避免发布后网页404，要在Blog\public目录下创建CNAME文件(无后缀)，其内容为仓库域名</strong>   （域名不需要添加http）</li>
+<li><strong>注意：避免每次发布后网页404，要在Blog\public目录下创建CNAME文件(无后缀)，其内容为仓库域名</strong>   （域名不需要添加http）</li>
 </ul>
 <h2 id="7-Start-to-Blog"><a href="#7-Start-to-Blog" class="headerlink" title="7.Start  to Blog"></a>7.Start  to Blog</h2><p>个人博客已经搭建完毕，那么，该如何写文章呢？</p>
 <p>发布文章</p>
@@ -314,19 +314,23 @@ INFO  Created: D:\Amusement\Blog\source\_posts\my-first-Blog.md</code></pre>
 <h1 id="三、花里胡哨-待补充"><a href="#三、花里胡哨-待补充" class="headerlink" title="三、花里胡哨(待补充)"></a>三、花里胡哨(待补充)</h1><ul>
 <li><p><strong>更改主题</strong></p>
 <p>可以通过Hexo官网下载相关<a href="https://hexo.io/themes/" target="_blank" rel="noopener">主题</a></p>
-<p>1.单击主题标题进入github页面</p>
+<ol>
+<li>单击主题标题进入github页面</li>
+</ol>
 <img src="https://s1.ax1x.com/2020/03/14/8MVX2q.md.png" srcset="/img/loading.gif" alt="Snipaste 2020 03 13 23 34 36"  />
 
 
 
 </li>
 </ul>
-<p>  2.下载压缩文件，然后解压至博客根目录的theme文件夹内</p>
-  <img src="https://s1.ax1x.com/2020/03/14/8MVjx0.png" srcset="/img/loading.gif" alt="Snipaste 2020 03 13 23 35 00" style="zoom:80%;" />
-
-<p>  3.修改博客根目录下_config.yml文件内容</p>
-  <img src="https://s1.ax1x.com/2020/03/14/8MVxMV.png" srcset="/img/loading.gif" alt="Snipaste 2020 03 13 23 41 22" style="zoom:80%;" />
-
+<ol start="2">
+<li><p>下载压缩文件，然后解压至博客根目录的theme文件夹内</p>
+<img src="https://s1.ax1x.com/2020/03/14/8MVjx0.png" srcset="/img/loading.gif" alt="Snipaste 2020 03 13 23 35 00" style="zoom:80%;" />
+</li>
+<li><p>修改博客根目录下_config.yml文件内容</p>
+<img src="https://s1.ax1x.com/2020/03/14/8MVxMV.png" srcset="/img/loading.gif" alt="Snipaste 2020 03 13 23 41 22" style="zoom:80%;" />
+</li>
+</ol>
 <p>  <strong>注意：</strong>冒号后有空格</p>
 <ul>
 <li><p><strong>设置背景</strong></p>
@@ -363,7 +367,7 @@ INFO  Created: D:\Amusement\Blog\source\_posts\my-first-Blog.md</code></pre>
                   <span>
                 <i class="iconfont icon-inbox"></i>
                     
-                      <a class="hover-with-bg" href="/categories/hexo/">hexo</a>
+                      <a class="hover-with-bg" href="/categories/CS/">CS</a>
                       &nbsp;
                     
                   </span>&nbsp;&nbsp;
@@ -548,7 +552,7 @@ INFO  Created: D:\Amusement\Blog\source\_posts\my-first-Blog.md</code></pre>
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "Hexo+Github Pages搭建&nbsp;",
+        "Hexo+Github Pages搭建博客&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
