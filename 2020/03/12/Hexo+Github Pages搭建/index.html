@@ -415,7 +415,7 @@ INFO  Created: D:\Amusement\Blog\source\_posts\my-first-Blog.md</code></pre>
                 
               </p>
               
-                <p class="note note-warning">All articles in this blog adopt <a href="https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License" target="_blank" rel="nofollow noopener noopener">CC BY-SA 3.0 protocol unless otherwise stated. Reprint please indicate the source!</p>
+                <p class="note note-warning">All articles in this blog adopt <a href="https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License" target="_blank" rel="nofollow noopener noopener">CC BY-SA 3.0 protocol</a>.Reprint please indicate the source!</p>
               
             </div>
 
@@ -584,17 +584,6 @@ INFO  Created: D:\Amusement\Blog\source\_posts\my-first-Blog.md</code></pre>
 <!-- Plugins -->
 
 
-  
-
-  
-
-  
-
-  
-
-  
-
-
 
   <script  src="https://cdn.staticfile.org/prettify/188.0.0/prettify.min.js" ></script>
   <script>
@@ -625,6 +614,21 @@ INFO  Created: D:\Amusement\Blog\source\_posts\my-first-Blog.md</code></pre>
   </script>
 
 
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
 
 
 
