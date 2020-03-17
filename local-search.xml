@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>合并两个有序链表</title>
+    <link href="/2020/03/17/%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E9%93%BE%E8%A1%A8/"/>
+    <url>/2020/03/17/%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E9%93%BE%E8%A1%A8/</url>
+    
+    <content type="html"><![CDATA[<p>将两个有序链表合并为一个新的有序链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。 </p><p>示例：</p><pre><code class="C++">输入：1-&gt;2-&gt;4, 1-&gt;3-&gt;4输出：1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4</code></pre><pre><code class="c++">class Solution {public:     ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {        if(l1 == NULL) {            return l2;        }        if(l2 == NULL) {            return l1;        }        if(l1-&gt;val &lt; l2-&gt;val) {            l1-&gt;next = mergeTwoLists(l1-&gt;next, l2);            return l1;        } else {            l2-&gt;next = mergeTwoLists(l1, l2-&gt;next);            return l2;        }    }};</code></pre>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>数据结构，C++</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>日本語の勉強らしい</title>
     <link href="/2020/03/14/%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%81%AE%E5%8B%89%E5%BC%B7%E3%82%89%E3%81%97%E3%81%84/"/>
     <url>/2020/03/14/%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%81%AE%E5%8B%89%E5%BC%B7%E3%82%89%E3%81%97%E3%81%84/</url>
